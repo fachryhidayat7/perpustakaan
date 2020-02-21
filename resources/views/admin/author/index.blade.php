@@ -5,6 +5,7 @@
         <div class="box-header">
             <h3 class="box-title">Data Penulis</h3>
         </div>
+        <a href="{{ route('admin.author.create')}} " class="btn btn-primary">Tambah Penulis</a>
         <div class="box-body">
             <table id="dataTable" class="table table-bordered table-hover">
                 <thead>
