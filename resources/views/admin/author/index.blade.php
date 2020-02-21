@@ -12,6 +12,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Nama</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
             </table>
@@ -27,8 +28,9 @@
                 serverSide: true,
                 ajax: '{{ route('admin.author.data') }}',
                 columns: [
-                    { data: 'id'},
-                    { data: 'name'}
+                    { data: 'DT_RowIndex', orderable: false, searchable: false},
+                    { data: 'name'},
+                    { data: 'action'}
                 ]
             });
         });
