@@ -18,6 +18,13 @@
             </table>
         </div>
     </div>
+
+    <form action="" method="POST" id="deleteForm">
+        @csrf
+        @method("DELETE")
+        <input type="submit" value="Delete" style="display:none">
+    </form>
+
 @endsection
 
 @push('scripts')
