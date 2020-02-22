@@ -1,11 +1,12 @@
 @extends('admin.templates.default')
 
 @section('content')
+<a href="{{ route('admin.author.create')}} " class="btn btn-primary">Tambah Penulis</a>
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Data Penulis</h3>
         </div>
-        <a href="{{ route('admin.author.create')}} " class="btn btn-primary">Tambah Penulis</a>
+       
         <div class="box-body">
             <table id="dataTable" class="table table-bordered table-hover">
                 <thead>
@@ -28,6 +29,8 @@
 @endsection
 
 @push('scripts')
+<script src="{{ asset('assets/plugins/bs-notify.min.js')}}"></script>
+@include('admin.templates.partials.alerts')
     <script>
         $(function() {
             $('#dataTable').DataTable({
