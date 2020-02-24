@@ -9,9 +9,13 @@
         <form action="{{ route('admin.author.store') }}" method="POST">
                 @csrf
 
-                <div class="form-group">
+                <div class="form-group @error('name') has-error @enderror">
                     <label for="">Nama</label>
-                    <input type="text" name="name" class="form-control" placeholder="Masukkan Nama Penulis">
+                    <input type="text" name="name" class="form-control" placeholder="Masukkan Nama Penulis" 
+                     value="{{ old('name') }}" >
+                    @error('name')
+                        <span class="help-block">{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="form-group">
