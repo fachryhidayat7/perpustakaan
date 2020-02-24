@@ -61,4 +61,7 @@ $RECYCLE.BIN/
 #debugbar
 /storage/debugbar
 
+#covers
+/public/assets/covers
+
 # End of https://www.gitignore.io/api/laravel,windows,visualstudiocode

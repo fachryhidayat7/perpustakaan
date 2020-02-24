@@ -6,7 +6,7 @@
             <h3 class="box-title">Tambah Data Buku</h3>
         </div>
             <div class="box-body">
-            <form action="{{ route('admin.book.store') }}" method="POST">
+            <form action="{{ route('admin.book.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group @error('title') has-error @enderror">
