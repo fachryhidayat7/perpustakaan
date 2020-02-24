@@ -1,10 +1,10 @@
 @extends('admin.templates.default')
 
 @section('content')
-<a href="{{ route('admin.author.create')}} " class="btn btn-primary">Tambah Penulis</a>
+<a href="{{ route('admin.book.create')}} " class="btn btn-primary">Tambah Buku</a>
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Data Penulis</h3>
+            <h3 class="box-title">Data Buku</h3>
         </div>
        
         <div class="box-body">

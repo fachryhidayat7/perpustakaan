@@ -30,3 +30,10 @@ Breadcrumbs::for('admin.book.index', function ($trail) {
     $trail->push('Beranda', route('admin.dashboard'));
     $trail->push('Book', route('admin.book.index'));
 });
+
+// Author Tambah Book
+Breadcrumbs::for('admin.book.create', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Book', route('admin.book.index'));
+    $trail->push('Tambah Buku', route('admin.book.create'));
+});
