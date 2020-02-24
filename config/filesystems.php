@@ -46,6 +46,7 @@ return [
         'local' => [
             'driver' => 'local',
             // 'root' => storage_path('app'),
+            //membuat gambar disimpan dalam folder public
             'root' => public_path(),
         ],
 

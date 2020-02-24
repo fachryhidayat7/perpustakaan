@@ -25,6 +25,7 @@ class DataController extends Controller
                                 return $model->author->name;
                             })
                             ->editColumn('cover', function(Book $model){
+                                //Buka filesytem di config untuk mengubah gambar menjadi public
                                 return '<img src="'. $model->getCover() .'" height="100px">';
                             })
                             ->addIndexColumn()
