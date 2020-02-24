@@ -28,21 +28,31 @@
 
 @endsection
 
+@push('styles')
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset ('assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+@endpush
+
 @push('scripts')
-<script src="{{ asset('assets/plugins/bs-notify.min.js')}}"></script>
-@include('admin.templates.partials.alerts')
-    <script>
-        $(function() {
-            $('#dataTable').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: '{{ route('admin.author.data') }}',
-                columns: [
-                    { data: 'DT_RowIndex', orderable: false, searchable: false},
-                    { data: 'name'},
-                    { data: 'action'}
-                ]
+    <!-- DataTables -->
+    <script src="{{ asset ('assets/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset ('assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <!-- Bootstrap Notify -->
+    <script src="{{ asset('assets/plugins/bs-notify.min.js')}}"></script>
+    @include('admin.templates.partials.alerts')
+    <!-- Ajax -->
+        <script>
+            $(function() {
+                $('#dataTable').DataTable({
+                    processing: true,
+                    serverSide: true,
+                    ajax: '{{ route('admin.author.data') }}',
+                    columns: [
+                        { data: 'DT_RowIndex', orderable: false, searchable: false},
+                        { data: 'name'},
+                        { data: 'action'}
+                    ]
+                });
             });
-        });
-    </script>
+        </script>
 @endpush
