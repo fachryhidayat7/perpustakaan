@@ -9,5 +9,7 @@ Route::get('/', 'HomeController@index')->name('dashboard');
 // Route::delete('/author/{author}', 'AuthorController@destroy')->name('author.destroy');
 
 Route::get('/author/data', 'DataController@authors')->name('author.data');
+Route::get('/book/data', 'DataController@books')->name('book.data');
 //Memperingkas Route
 Route::resource('author', 'AuthorController');
+Route::resource('book', 'BookController');
