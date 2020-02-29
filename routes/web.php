@@ -12,9 +12,7 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Frontend\\BookController@index');
 
 Auth::routes(['verify' => true]);
 
