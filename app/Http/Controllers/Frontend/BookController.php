@@ -20,4 +20,8 @@ class BookController extends Controller
             'book' => $book,
         ]);
     }
+
+    public function borrow(Book $book){
+        dd($book);
+    }
 }

@@ -7,6 +7,7 @@
      <div class="container">
         @yield('content')
      </div>
+     @include('frontend.templates.partials.footer')
      @include('frontend.templates.partials.scripts')
 </body>
 </html>

@@ -1,7 +1,7 @@
 @extends('frontend.templates.default')
 
 @section('content')
-    <div class="container">
+    <div class="container" style="margin-top:100px">
         <h3>Register</h3>
         <form action="{{ route ('register') }}" class="col s12" method="post">
             @csrf

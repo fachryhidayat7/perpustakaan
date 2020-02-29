@@ -1,7 +1,7 @@
 @extends('frontend.templates.default')
 
 @section('content')
-<h4>Detail Buku</h4>
+<h4 style="margin-top:100px;">Detail Buku</h4>
 <div class="col sm12 m12">
     <div class="card horizontal hoverable">
         {{-- <div class="card-image"> --}}
